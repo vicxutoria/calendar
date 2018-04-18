@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="calendar.css"/>
+    <title>Calendar</title>
+    <script src="http://classes.engineering.wustl.edu/cse330/content/calendar.min.js"></script>
+</head>
+<body id="main">
+    <h1><a href="webpage.html">Calendar</a></h1>
+    <div class="row">
+        <div class="userCol">
+            <!-- User Log In and Registration Inputs/Buttons -->
+            <div id="loginform">
+                <label id="usernamelogin">Enter Username: <input type="text" id="login_user" placeholder="Enter Username" required/></label><br>
+                <label id="passwordlogin">Enter Password: <input type="password" id="login_password" placeholder="Enter Password" required/></label><br>
+                <br>
+                <button id="login_btn">Log In</button>
+                <button id="register_btn">Register</button>
+                <button id="logout_btn" hidden>Log Out</button>
+                <br>
+            </div>
+        </div>
+        <div class="calendarCol">
+            <div class="month">
+                <ul>
+                    <li id="prev" class="prev">&#10094;</li>
+                    <li id="next" class="next">&#10095;</li>
+                    <li id="displayMonth"></li>
+                    <li id="displayYear"></li>
+                </ul>
+            </div>
+            <ul class="weekdays">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <!-- Table for Days of the Month -->
+            <div id="calendar_display" class="days">
+                <table>
+                    <tbody>
+                        <tr id="r0">
+                            <td id="col00"><div class="coltop" id="coltop00"></div><div class="colbottom" id="colbottom00"></div></td>
+                            <td id="col01"><div class="coltop" id="coltop01"></div><div class="colbottom" id="colbottom01"></div></td>
+                            <td id="col02"><div class="coltop" id="coltop02"></div><div class="colbottom" id="colbottom02"></div></td>
+                            <td id="col03"><div class="coltop" id="coltop03"></div><div class="colbottom" id="colbottom03"></div></td>
+                            <td id="col04"><div class="coltop" id="coltop04"></div><div class="colbottom" id="colbottom04"></div></td>
+                            <td id="col05"><div class="coltop" id="coltop05"></div><div class="colbottom" id="colbottom05"></div></td>
+                            <td id="col06"><div class="coltop" id="coltop06"></div><div class="colbottom" id="colbottom06"></div></td>
+                        </tr>
+                        <tr id="r1">
+                            <td id="col10"><div class="coltop" id="coltop10"></div><div class="colbottom" id="colbottom10"></div></td>
+                            <td id="col11"><div class="coltop" id="coltop11"></div><div class="colbottom" id="colbottom11"></div></td>
+                            <td id="col12"><div class="coltop" id="coltop12"></div><div class="colbottom" id="colbottom12"></div></td>
+                            <td id="col13"><div class="coltop" id="coltop13"></div><div class="colbottom" id="colbottom13"></div></td>
+                            <td id="col14"><div class="coltop" id="coltop14"></div><div class="colbottom" id="colbottom14"></div></td>
+                            <td id="col15"><div class="coltop" id="coltop15"></div><div class="colbottom" id="colbottom15"></div></td>
+                            <td id="col16"><div class="coltop" id="coltop16"></div><div class="colbottom" id="colbottom16"></div></td>
+                        </tr>
+                        <tr id="r2">
+                            <td id="col20"><div class="coltop" id="coltop20"></div><div class="colbottom" id="colbottom20"></div></td>
+                            <td id="col21"><div class="coltop" id="coltop21"></div><div class="colbottom" id="colbottom21"></div></td>
+                            <td id="col22"><div class="coltop" id="coltop22"></div><div class="colbottom" id="colbottom22"></div></td>
+                            <td id="col23"><div class="coltop" id="coltop23"></div><div class="colbottom" id="colbottom23"></div></td>
+                            <td id="col24"><div class="coltop" id="coltop24"></div><div class="colbottom" id="colbottom24"></div></td>
+                            <td id="col25"><div class="coltop" id="coltop25"></div><div class="colbottom" id="colbottom25"></div></td>
+                            <td id="col26"><div class="coltop" id="coltop26"></div><div class="colbottom" id="colbottom26"></div></td>
+                        </tr>
+                        <tr id="r3">
+                            <td id="col30"><div class="coltop" id="coltop30"></div><div class="colbottom" id="colbottom30"></div></td>
+                            <td id="col31"><div class="coltop" id="coltop31"></div><div class="colbottom" id="colbottom31"></div></td>
+                            <td id="col32"><div class="coltop" id="coltop32"></div><div class="colbottom" id="colbottom32"></div></td>
+                            <td id="col33"><div class="coltop" id="coltop33"></div><div class="colbottom" id="colbottom33"></div></td>
+                            <td id="col34"><div class="coltop" id="coltop34"></div><div class="colbottom" id="colbottom34"></div></td>
+                            <td id="col35"><div class="coltop" id="coltop35"></div><div class="colbottom" id="colbottom35"></div></td>
+                            <td id="col36"><div class="coltop" id="coltop36"></div><div class="colbottom" id="colbottom36"></div></td>
+                        </tr>
+                        <tr id="r4">
+                            <td id="col40"><div class="coltop" id="coltop40"></div><div class="colbottom" id="colbottom40"></div></td>
+                            <td id="col41"><div class="coltop" id="coltop41"></div><div class="colbottom" id="colbottom41"></div></td>
+                            <td id="col42"><div class="coltop" id="coltop42"></div><div class="colbottom" id="colbottom42"></div></td>
+                            <td id="col43"><div class="coltop" id="coltop43"></div><div class="colbottom" id="colbottom43"></div></td>
+                            <td id="col44"><div class="coltop" id="coltop44"></div><div class="colbottom" id="colbottom44"></div></td>
+                            <td id="col45"><div class="coltop" id="coltop45"></div><div class="colbottom" id="colbottom45"></div></td>
+                            <td id="col46"><div class="coltop" id="coltop46"></div><div class="colbottom" id="colbottom46"></div></td>
+                        </tr>
+                        <tr id="r5">
+                            <td id="col50"><div class="coltop" id="coltop50"></div><div class="colbottom" id="colbottom50"></div></td>
+                            <td id="col51"><div class="coltop" id="coltop51"></div><div class="colbottom" id="colbottom51"></div></td>
+                            <td id="col52"><div class="coltop" id="coltop52"></div><div class="colbottom" id="colbottom52"></div></td>
+                            <td id="col53"><div class="coltop" id="coltop53"></div><div class="colbottom" id="colbottom53"></div></td>
+                            <td id="col54"><div class="coltop" id="coltop54"></div><div class="colbottom" id="colbottom54"></div></td>
+                            <td id="col55"><div class="coltop" id="coltop55"></div><div class="colbottom" id="colbottom55"></div></td>
+                            <td id="col56"><div class="coltop" id="coltop56"></div><div class="colbottom" id="colbottom56"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Event Editor Popup -->
+            <div id="eventEditor" class="modal">
+                <div class="modal-content"><h1 style="text-align:center;">Event Editor</h1>
+                    <div id="eventContents"></div>
+                    <div>
+                        <select id="eventlist" size="3"></select>
+                        <br>Select an Event Above to Edit/Delete<br><br>
+                        <br>New Event Description: <br><textarea id="neweventname" placeholder="Enter Event Description"></textarea>
+                        <br>New Event Time(hh:mm, ie. 18:45): <br><input type="text" id="neweventtime" placeholder="Enter Event Time">
+                        <br>Event Tag (optional): <br><input type="text" id="tags" placeholder="Enter Optional Tag Name">
+                        <br>Share with users (optional, ie. "john, robert, mary, etc."): <br><input type="text" id="sharewith" placeholder="Enter Usernames to Share">
+                        <input type="hidden" name="token" value=""/>
+                        <br><br>
+                        <button id="addEvent" type="button">Add</button>
+                        <button id="editEvent" type="button">Edit</button>
+                        <button id="deleteEvent" type="button">Delete</button>
+                        <button id="cancelEventPopup" type="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Registration Form Popup -->
+            <div id="signupform" class="modal">
+                <h2>User Registration Form</h2>
+                <div class="form-content-signup">
+                    <div class="container-signup">
+                        <h1>Account Registration</h1>
+                        <p>Please fill out this form to create an account.</p>
+                        <hr>
+                            <label><b>Username: </b><input type="text" placeholder="Enter Username" id="newusername" required></label>
+                            <br>
+                            <label><b>Password: </b><input type="password" placeholder="Enter Password" id="newpassword" required></label>
+                            <br>
+                            <label><b>Confirm Password: </b><input type="password" placeholder="Confirm Password" id="pass_conf" required></label>
+                            <br>
+                            <div class="clearfix">
+                                <button type="submit" id="signup_btn" class="signupbtn"><b>Sign Up</b></button>
+                                <button type="button" id="cancelRegisterBtn" class="cancelbtn"><b>Cancel</b></button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="fescriptpage.js"></script>
+        <script src="scriptpage.js"></script>
+    </div>
+</body>
+</html>
+

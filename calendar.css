@@ -1,0 +1,242 @@
+#main{
+    background-color: #BBF3DB;
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+    color: #F128B7;
+    text-shadow: 3px 3px #4C18DC;
+    font-weight: bold;
+    font-family: Comic Sans MS;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a:link{
+    color: green;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #F128B7;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    text-decoration: underline;
+}
+
+.userCol{
+    width: 25%;
+    color: #4C18DC;
+    font-weight: bold;
+    text-shadow: 1px 1px #F128B7;
+    font-family: Comic Sans MS;
+}
+
+.calendarCol{
+    width: 1450;
+    
+    padding: 10px;
+    background-color: white;
+}
+
+.month{
+    width: 100%;
+    background: #ADFFDD;
+    text-align: center;
+    font-family: Comic Sans MS;
+    color: #F128B7;
+    font-weight: bold;
+}
+
+.month ul{
+    margin: 0;
+    padding: 0;
+    color: #F128B7;
+}
+
+.month ul li{
+    color: #F128B7;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px #4C18DC;
+    font-weight: bold;
+}
+
+.month .prev{
+    float: left;
+    padding-top: 10px;
+    padding-left: 300px;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.month .next{
+    float: right;
+    padding-top: 10px;
+    padding-right: 300px;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.weekdays{
+    margin: 0;
+    padding: 5px 0 0 0;
+    background-color: orange;
+}
+
+.weekdays li{
+    display: inline-block;
+    width: 13.65%;
+    color: #F128B7;
+    text-shadow: 1px 1px #4C18DC;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Comic Sans MS;
+    letter-spacing: 1px;
+}
+
+.days{
+    padding: 10px 0;
+    background: #FFF20C;
+    margin: 0;
+}
+
+.days table{
+    border: 1px solid white;
+    height: 600px;
+}
+
+.days table td{
+    width: 200px;
+    min-height: 1px;
+    text-align: left;
+    font-family: Comic Sans MS;
+    border: 1px solid white;
+    border-color: white;
+    cursor: pointer;
+}
+
+coltop{
+    height: 10%;
+    color: black;
+}
+
+colbottom{
+    height: 90%;
+    color: black;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    background-color: #BBF3DB;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #F128B7;
+    text-shadow: 1px 1px #4C18DC;
+    font-family: Comic Sans MS;
+}
+select, textarea, input{
+    width: 50%;
+}
+
+input[type=text], input[type=password]{
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+button{
+    background-color: orange;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.9;
+    font-family: Comic Sans MS;
+}
+
+button:hover{
+    opacity: 5;
+}
+
+.form-content-signup{
+    background-color: #BBF3DB;
+    margin: 2% auto 15% auto;
+    border: 1px solid #888;
+    width: 50%;
+    height: 68%;
+}
+
+.container-signup div input{
+    width: 60%;
+}
+
+.cancelbtn{
+    padding: 14px 20px;
+    background-color: orange;
+}
+
+.cancelbtn, .signupbtn{
+    float: none;
+    width: 40%;
+}
+
+.close{
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover, .close:focus{
+    color: #f44336;
+    cursor: pointer;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px){
+    .cancelbtn, .signupbtn{
+        width: 100%;
+    }
+}
